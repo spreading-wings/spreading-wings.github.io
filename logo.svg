@@ -1,0 +1,98 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for premium look -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d7dd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2d7dd2;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Drop shadow -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle with gradient -->
+  <circle cx="120" cy="120" r="110" fill="url(#primaryGradient)" opacity="0.95"/>
+  <circle cx="120" cy="120" r="110" fill="url(#glowGradient)"/>
+  <circle cx="120" cy="120" r="110" fill="none" stroke="url(#goldGradient)" stroke-width="4"/>
+  
+  <!-- Premium Wings Design -->
+  <g transform="translate(120, 120)" filter="url(#dropShadow)">
+    <!-- Left Wing - Upper -->
+    <path d="M -40,-25 Q -75,-45 -85,-55 Q -80,-50 -75,-45 Q -65,-35 -55,-30 L -40,-25" 
+          fill="url(#goldGradient)" opacity="0.95"/>
+    <path d="M -40,-25 Q -65,-20 -80,-10 Q -70,-15 -60,-20 Q -50,-23 -40,-25" 
+          fill="url(#goldGradient)" opacity="0.9"/>
+    <path d="M -45,-15 Q -65,-5 -80,10 Q -70,5 -60,0 Q -50,-8 -45,-15" 
+          fill="url(#goldGradient)" opacity="0.85"/>
+    <path d="M -40,-5 Q -58,8 -70,25 Q -60,15 -50,8 Q -43,2 -40,-5" 
+          fill="url(#goldGradient)" opacity="0.75"/>
+    
+    <!-- Right Wing - Upper -->
+    <path d="M 40,-25 Q 75,-45 85,-55 Q 80,-50 75,-45 Q 65,-35 55,-30 L 40,-25" 
+          fill="url(#goldGradient)" opacity="0.95"/>
+    <path d="M 40,-25 Q 65,-20 80,-10 Q 70,-15 60,-20 Q 50,-23 40,-25" 
+          fill="url(#goldGradient)" opacity="0.9"/>
+    <path d="M 45,-15 Q 65,-5 80,10 Q 70,5 60,0 Q 50,-8 45,-15" 
+          fill="url(#goldGradient)" opacity="0.85"/>
+    <path d="M 40,-5 Q 58,8 70,25 Q 60,15 50,8 Q 43,2 40,-5" 
+          fill="url(#goldGradient)" opacity="0.75"/>
+    
+    <!-- Central Body/Shield -->
+    <ellipse cx="0" cy="-18" rx="20" ry="35" fill="#ffffff" opacity="0.15"/>
+    <ellipse cx="0" cy="-18" rx="18" ry="32" fill="url(#primaryGradient)"/>
+    
+    <!-- Eagle Head -->
+    <circle cx="0" cy="-45" r="15" fill="url(#primaryGradient)"/>
+    <circle cx="0" cy="-45" r="15" fill="#ffffff" opacity="0.1"/>
+    
+    <!-- Beak -->
+    <path d="M 2,-45 L 12,-44 L 8,-41 Z" fill="url(#goldGradient)"/>
+    
+    <!-- Eye highlight -->
+    <circle cx="4" cy="-48" r="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="5" cy="-47" r="1.5" fill="#1a365d"/>
+    
+    <!-- Wing details/feathers -->
+    <path d="M -35,-22 L -40,-18 L -38,-20 Z" fill="#ffffff" opacity="0.3"/>
+    <path d="M 35,-22 L 40,-18 L 38,-20 Z" fill="#ffffff" opacity="0.3"/>
+    
+    <!-- Tail elements -->
+    <path d="M -10,12 L -15,35 L -12,28 L -10,12" fill="url(#primaryGradient)" opacity="0.9"/>
+    <path d="M 0,15 L 0,40 L 2,30 L 0,15" fill="url(#primaryGradient)" opacity="0.9"/>
+    <path d="M 10,12 L 15,35 L 12,28 L 10,12" fill="url(#primaryGradient)" opacity="0.9"/>
+  </g>
+  
+  <!-- Company Initials with premium styling -->
+  <text x="120" y="205" 
+        font-family="'Inter', 'Segoe UI', Arial, sans-serif" 
+        font-size="38" 
+        font-weight="900" 
+        text-anchor="middle" 
+        fill="url(#goldGradient)"
+        filter="url(#dropShadow)">SW</text>
+  
+  <!-- Subtle accent lines -->
+  <circle cx="120" cy="120" r="105" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2"/>
+</svg>
